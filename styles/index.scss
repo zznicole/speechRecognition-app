@@ -1,0 +1,9 @@
+.screen {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/speaking.png);
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+}
+
