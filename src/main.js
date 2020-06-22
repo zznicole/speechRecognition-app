@@ -3,7 +3,7 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
 
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
-// recognition.lang = 'en-US';
+recognition.lang = 'en-US';
 
 
 function clickBtn() {
@@ -28,7 +28,12 @@ function clickBtn() {
     });
 
   recognition.addEventListener('end', recognition.start);
-  recognition.start()
+  recognition.start();
+
+  const handleStop = () => {
+    recognition.stop();
+    alert('Your speech recording has stopped.');
+  }
 };
 
 
