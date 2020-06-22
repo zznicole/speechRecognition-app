@@ -1,9 +1,22 @@
+
 .screen {
   width: 100%;
   height: 100vh;
   background-image: url(/assets/speaking.png);
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.heading {
+  color: aquamarine;
+}
+
+.words {
+  width: 60%;
+  height: auto;
+  background-color: lightgoldenrodyellow;
+  box-shadow: 1px 1px 5px darkblue;
+  color: black
+}
+;
