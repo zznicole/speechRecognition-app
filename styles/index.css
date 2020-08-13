@@ -30,7 +30,7 @@ body {
 
 .screen::after {
   content: "";
-  background-image: url(/assets/audios.jpg);
+  background-image: url(../assets/audios.jpg);
   opacity: 0.9;
   top: 0;
   left: 0;
