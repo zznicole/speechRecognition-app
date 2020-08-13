@@ -1,16 +1,46 @@
+$red: #E53030;
+$green: #0EC518;
+$darkblue: #03031d3f;
+$darkerblue: #03031de3;
+$creamy: rgb(250, 250, 232);
+
+@mixin round-button($baseColor:$darkblue, $hoverBaseColor:#333, $diameter:6vw) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $darkerblue;
+  margin: 1em;
+  padding: .2em;
+  background: $baseColor;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px darken($baseColor, 10%) inset, 0 5px 5px rgba(darken($baseColor, 40%), 0.17), 0 15px rgba(#fff, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+  height: $diameter;
+  width: $diameter;
+  
+  &:hover {
+    background: $hoverBaseColor;
+    transform: scale(1.1);
+    box-shadow: 0 -2px 0 3px darken($hoverBaseColor, 10%) inset, 0 5px 5px rgba(darken($hoverBaseColor, 40%), 0.17), 0 15px rgba(#fff, 0.32) inset;
+   }
+}
+
+
 body {
   width: 100%;
   height: auto;
-  background-color: #03031d3f;
+  background-color: $darkblue;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
 .screen {
   width: 100%;
   max-height: auto;
-  background-color: #03031d3f;
+  background-color: $darkblue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +50,7 @@ body {
 
 .screen::after {
   content: "";
-  background-image: url(/assets/speaking.png);
+  background-image: url(/assets/audios.jpg);
   opacity: 0.9;
   top: 0;
   left: 0;
@@ -31,55 +61,47 @@ body {
   padding: 2rem;
 }
 
+.heading {
+  color: aquamarine;
+  font-style: bold;
+  font-size: 3.3rem;
+  text-shadow: 3px 3px 5px rgb(8, 4, 59);
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+.subtittle {
+  color: rgb(35, 2, 73);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.5;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 2px $creamy;
+}
+
+
 .btns {
   display: flex;
   justify-content: space-evenly;
 
   &__start {
-    font-size: 1.5rem;
-    background-color: rgb(8, 3, 59);
-    border-radius: 50px;
-    padding: .8rem 2rem;
-    border: 0;
-    margin: 2em;
-    color:aquamarine;
-
-    &:hover {
-      background-color: aquamarine;
-      transform: scale(1.1);
-      color: darkgray;
-    }
+    @include round-button($green);
   }
 
   &__end {
-    font-size: 1.5rem;
-    background-color: rgb(8, 3, 59);
-    border-radius: 50px;
-    padding: .8rem 2rem;
-    border: 0;
-    margin: 2em;
-    color:aquamarine;
-
-    &:hover {
-      background-color: aquamarine;
-      transform: scale(1.1);
-      color: darkgray;
-    }
+    @include round-button($red);
   }
-}
-.heading {
-  color: aquamarine;
-  font-style: bold;
-  font-size: 3rem;
-  text-shadow: 3px 3px 5px rgb(141, 141, 141);
 }
 
 .words {
   width: 60%;
   height: auto;
-  background-color: rgb(250, 250, 232);
-  box-shadow: 3px 3px 5px rgb(141, 141, 141);
-  font-size: 1.2 rem;
+  background-color: $creamy;
+  box-shadow: 3px 3px 5px  rgb(8, 4, 59);
+  font-size: 1.5 rem;
   border-radius: 8px;
   padding: 1.5rem 2rem;
 }

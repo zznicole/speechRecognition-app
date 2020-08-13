@@ -30,7 +30,7 @@ body {
 
 .screen::after {
   content: "";
-  background-image: url(/assets/speaking.png);
+  background-image: url(/assets/audios.jpg);
   opacity: 0.9;
   top: 0;
   left: 0;
@@ -39,6 +39,27 @@ body {
   position: absolute;
   z-index: -1;
   padding: 2rem;
+}
+
+.heading {
+  color: aquamarine;
+  font-style: bold;
+  font-size: 3.3rem;
+  text-shadow: 3px 3px 5px #08043b;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+.subtittle {
+  color: #230249;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.5;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 2px #fafae8;
 }
 
 .btns {
@@ -52,52 +73,61 @@ body {
 
 .btns__start {
   font-size: 1.5rem;
-  background-color: #08033b;
-  border-radius: 50px;
-  padding: .8rem 2rem;
-  border: 0;
-  margin: 2em;
-  color: aquamarine;
+  font-weight: 700;
+  color: #03031de3;
+  margin: 1em;
+  padding: .2em;
+  background: #0EC518;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 -2px 0 3px #0b9512 inset, 0 5px 5px rgba(0, 7, 1, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #0b9512 inset, 0 5px 5px rgba(0, 7, 1, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+  height: 6vw;
+  width: 6vw;
 }
 
 .btns__start:hover {
-  background-color: aquamarine;
+  background: #333;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: darkgray;
+  -webkit-box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+          box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
 }
 
 .btns__end {
   font-size: 1.5rem;
-  background-color: #08033b;
-  border-radius: 50px;
-  padding: .8rem 2rem;
-  border: 0;
-  margin: 2em;
-  color: aquamarine;
+  font-weight: 700;
+  color: #03031de3;
+  margin: 1em;
+  padding: .2em;
+  background: #E53030;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 -2px 0 3px #c91919 inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #c91919 inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+  height: 6vw;
+  width: 6vw;
 }
 
 .btns__end:hover {
-  background-color: aquamarine;
+  background: #333;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: darkgray;
-}
-
-.heading {
-  color: aquamarine;
-  font-style: bold;
-  font-size: 3rem;
-  text-shadow: 3px 3px 5px #8d8d8d;
+  -webkit-box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+          box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
 }
 
 .words {
   width: 60%;
   height: auto;
   background-color: #fafae8;
-  -webkit-box-shadow: 3px 3px 5px #8d8d8d;
-          box-shadow: 3px 3px 5px #8d8d8d;
-  font-size: 1.2 rem;
+  -webkit-box-shadow: 3px 3px 5px #08043b;
+          box-shadow: 3px 3px 5px #08043b;
+  font-size: 1.5 rem;
   border-radius: 8px;
   padding: 1.5rem 2rem;
 }

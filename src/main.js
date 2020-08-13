@@ -5,9 +5,9 @@ const recognition = new SpeechRecognition();
 recognition.interimResults = true;
 recognition.lang = 'en-US';
 //recognition.lang = 'sv-SE';
-// recognition.lang = 'zh-CN';
+//recognition.lang = 'zh-CN';
 let p = document.createElement('p');
-const words = document.querySelector('.words');
+let words = document.querySelector('.words');
 
 words.appendChild(p);
 recognition.addEventListener('result', e => {
@@ -38,16 +38,17 @@ function clickToStart() {
 function clickToEnd() {
   inRecording = false;
   recognition.removeEventListener('end', recognition.start);
-  // recognition.addEventListener('end', recognition.stop);
-//  recognition.stop();
   recognition.abort();
   console.log('Speech recognition aborted.');
-//   recognition.onspeechend = function() {
-//   recognition.stop();
-//   console.log('Speech recognition has stopped.');
-// }
 }
 
-
+// function sendMail() {
+//   let link = "mailto:me@example.com"
+//            + "?cc=myCCaddress@example.com"
+//            + "&subject=" + escape("This is my subject")
+//            + "&body=" + escape(document.querySelector('.words').value)
+//   ;
+//   window.location.href = link;
+// }
 
  
