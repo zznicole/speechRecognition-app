@@ -4,7 +4,7 @@ $darkblue: #03031d3f;
 $darkerblue: #03031de3;
 $creamy: rgb(250, 250, 232);
 
-@mixin round-button($baseColor:$darkblue, $hoverBaseColor:#333, $diameter:6vw) {
+@mixin round-button($baseColor:$darkblue, $hoverBaseColor:#333, $diameter: 5rem) {
   font-size: 1.5rem;
   font-weight: 700;
   color: $darkerblue;
